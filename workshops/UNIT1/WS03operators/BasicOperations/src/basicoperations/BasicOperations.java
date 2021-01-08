@@ -69,7 +69,7 @@ public class BasicOperations {
         System.out.println(" the subtraction of " + minuend + " - " + subtrahend + " is equal to " + (minuend - subtrahend));
         System.out.println( " the multiplication of " + multiplying + " * " + multiplier + " is equal to " + (multiplying * multiplier));
         System.out.println(" the division of " + dividend + "/" + divisor + " is equal to " + (dividend / divisor));
-        System.out.println( " the percentage of " + quantity + " % " + base + " is equal to " + ( quantity % base) );
+        System.out.println( " the modulus  of " + quantity + " % " + base + " is equal to " + ( quantity % base) );
         
         
         
