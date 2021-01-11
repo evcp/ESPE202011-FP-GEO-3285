@@ -18,13 +18,13 @@ public class AreaOfPentagonWithShort {
         // TODO code application logic here
         short length;
         short apothem;
-        int  area;
+        short  area;
         
-        length = 54;
-        apothem = 12;
-        area=(5*length*apothem)/2;
+        length = 65;
+        apothem = (short) (length/(2*0.73));
+        area= (short) (5*apothem*length);
         
-       System.out.println("the area " + 5 + "*" + length + "*" + apothem + "/"+ 2 + "is equal to--" +area);
+       System.out.println("the area " + length + "is equal to--" +area);
     }
     
 }
