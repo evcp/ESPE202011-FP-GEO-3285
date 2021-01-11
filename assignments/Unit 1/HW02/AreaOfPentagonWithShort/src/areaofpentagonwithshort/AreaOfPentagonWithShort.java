@@ -3,25 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pentagonsideswithshort;
+package areaofpentagonwithshort;
 
 /**
  *
  * @author Emilia
  */
-public class PentagonsidesWithShort {
+public class AreaOfPentagonWithShort {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        short sides;
-        sides =5;
+        short length;
+        short apothem;
+        int  area;
         
-        System.out.println("The sides of the pentagon are " +sides);
-         
+        length = 54;
+        apothem = 12;
+        area=(5*length*apothem)/2;
         
+       System.out.println("the area " + 5 + "*" + length + "*" + apothem + "/"+ 2 + "is equal to--" +area);
     }
     
 }
