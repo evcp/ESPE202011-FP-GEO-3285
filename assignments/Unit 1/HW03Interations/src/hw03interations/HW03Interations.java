@@ -33,7 +33,7 @@ public class HW03Interations {
            System.out.println("10 * " + "=" + product);
        }  
        
-        System.out.println("Rest : 10 ");
+        System.out.println("Rest : 10 "); 
         int stop=10;
         int rest=0;
         for(int j=1; j<=stop;j++){
