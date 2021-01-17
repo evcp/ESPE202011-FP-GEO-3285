@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Emilia
  */
-public class WS07MENUS {
+public class WS07Menus {
 
     /**
      * @param args the command line arguments
@@ -45,7 +45,7 @@ public class WS07MENUS {
                     addend2 = input.nextInt();
                     sum = addend1 + addend2;
                     System.out.println(" the sum is --> " + sum);
-                    break;
+                    break; 
                 case 2:
                      int minuend;
                      int subtrahend;
@@ -95,5 +95,6 @@ public class WS07MENUS {
 
 }
     
+        
+        
     
-
