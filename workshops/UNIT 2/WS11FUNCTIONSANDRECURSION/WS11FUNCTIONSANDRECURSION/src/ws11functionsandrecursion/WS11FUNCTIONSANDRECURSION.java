@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hw10.functions;
+package ws11functionsandrecursion;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Emilia
  */
-public class HW10FUNCTIONS {
+public class WS11FUNCTIONSANDRECURSION {
 
     /**
      * @param args the command line arguments
@@ -51,8 +51,12 @@ public class HW10FUNCTIONS {
         ensue= computeParabola(argument);
         System.out.println("the composition function--" +argument+"--is equal to--" +result );
         System.out.println("==========================================================");
-        
-        
+         
+        int number=5;
+        int fact=0;
+        fact=factorial(5);
+        System.out.println("factorial of" +number+ " is equal to ---" + fact);
+        System.out.println("==========================================================");
         System.out.println("Enter a number for the multiplication table");
         multiplicand= input.nextInt();
         System.out.println("The table of " + multiplicand + " is-- ");
@@ -64,7 +68,8 @@ public class HW10FUNCTIONS {
                 }
                 System.out.println("==========================================================");
                 
-                  System.out.println(
+       
+                      System.out.println(
                     "////////////////////////////////////// " + "\n"
                     + "|| ֍ G O O D  B Y E  D A R L Y I N G ֍ ||" + "\n"
                     + "/////////////////////////////////////");
@@ -103,4 +108,17 @@ public class HW10FUNCTIONS {
        
        return product;
     }
-}
+      public static int factorial(int n) {
+        if (n < 0) {
+            return -1;
+        } else {
+            if (n == 0) {
+                return 1;
+            } else {
+                return (n * factorial(n - 1));
+            }
+     }
+    }
+}    
+ 
+

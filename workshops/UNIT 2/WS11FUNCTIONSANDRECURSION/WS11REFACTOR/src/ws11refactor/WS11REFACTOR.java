@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hw09.embeddedstructures;
+package ws11refactor;
 
 import java.util.Scanner;
 
@@ -11,14 +11,14 @@ import java.util.Scanner;
  *
  * @author Emilia
  */
-public class HW09EMBEDDEDSTRUCTURES {
+public class WS11REFACTOR {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // DONE
-        Scanner input = new Scanner(System.in);
+        // TODO code application logic here
+    Scanner input = new Scanner(System.in);
 
         int integer1;
         int integer2;
@@ -113,3 +113,4 @@ public class HW09EMBEDDEDSTRUCTURES {
         }
     }
 }
+
