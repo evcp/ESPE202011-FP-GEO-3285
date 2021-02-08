@@ -29,6 +29,8 @@ public class WS11FUNCTIONSANDRECURSION {
         int multiplier=1;
         int multiplicand;
         int stop=12;
+        int number;
+        int fact=0;
         System.out.println("|||| F U N C T I O N S ||||");
         System.out.println("==========================="); 
         System.out.println("Enter a number for dividend ");
@@ -51,10 +53,9 @@ public class WS11FUNCTIONSANDRECURSION {
         ensue= computeParabola(argument);
         System.out.println("the composition function--" +argument+"--is equal to--" +result );
         System.out.println("==========================================================");
-         
-        int number=5;
-        int fact=0;
-        fact=factorial(5);
+        System.out.println("Enter a number for factorial");
+        number=input.nextInt();
+        fact= factorial( number);
         System.out.println("factorial of" +number+ " is equal to ---" + fact);
         System.out.println("==========================================================");
         System.out.println("Enter a number for the multiplication table");
