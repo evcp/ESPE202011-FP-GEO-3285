@@ -34,14 +34,12 @@ public class HW12TAXES {
         float tax;
         float remainder;
         float shop;
-        
 
         Scanner input = new Scanner(System.in);
         System.out.println("----IVA CALCULATOR -----");
         System.out.println("Enter the subtotal--");
         base = getIVA(input);
 
-        System.out.println("The total is--" + base);
         System.out.println("=======================");
 
         System.out.println("INCOME TAX CALCULATOR");
@@ -86,40 +84,35 @@ public class HW12TAXES {
 
             getTax8(taxablebase);
 
-       
-          System.out.println("BADGE CALCULATOR");
-           System.out.println("Enter AMOUNT YOU WANT TO SEND");
-           cash=input.nextFloat();
-           if (cash  > 1200 ){
-            remainder=getCash(cash);
-               System.out.println("The remainder "+remainder);
-           
-               
+            System.out.println("BADGE CALCULATOR");
+            System.out.println("Enter AMOUNT YOU WANT TO SEND");
+            cash = input.nextFloat();
+            if (cash > 1200) {
+                remainder = getCash(cash);
+                System.out.println("The remainder " + remainder);
+
                 System.out.println("Enter AMOUNT YOU WANT TO SEND");
-           shop=input.nextFloat();
-            if (shop >5017.33){
-                 tax=getShop(shop);
-                 System.out.println("The remainder "+tax);
-            
-              
-                
+                shop = input.nextFloat();
+                if (shop > 5017.33) {
+                    tax = getShop(shop);
+                    System.out.println("The remainder " + tax);
+
+                }
+
             }
-               
-               
-           } 
-           }
-           
-}
+        }
+
+    }
 
     private static float getShop(float shop) {
         float tax;
-        tax=(shop-5017.33F)*0.05F;
+        tax = (shop - 5017.33F) * 0.05F;
         return tax;
     }
 
     private static float getCash(float cash) {
         float remainder;
-        remainder=(cash-1200)*0.05F;
+        remainder = (cash - 1200) * 0.05F;
         return remainder;
     }
 
@@ -250,6 +243,8 @@ public class HW12TAXES {
         }
         IVA = (float) (base * 0.12);
         System.out.println("The IVA is--" + IVA);
+        base = (float) (base + IVA);
+        System.out.println("The total is--" + base);
         return base;
 
     }
