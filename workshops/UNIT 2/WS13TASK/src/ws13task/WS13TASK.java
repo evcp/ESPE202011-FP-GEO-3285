@@ -18,139 +18,159 @@ public class WS13TASK {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         boolean mainLoop = true;
         int option;
-        
-          do {
+        int force;
+        int mass;
+        int aceleration1;
+        int speed1;
+        int distance;
+        int time1;
+        int finalspeed;
+        int inicialspeed;
+        int aceleration;
+        int time;
+        int radio;
+        int area3;
+        int base;
+        int height;
+        int area2;
+        int length;
+        int apothem;
+        int area;
+
+        do {
             System.out.println(" ========= AREAS =======");
-            System.out.println("1. -> Pentagon");
-            System.out.println("2. -> Triangle");
-            System.out.println("3. -> Circle");
-            System.out.println("4. -> Exit");
+            showMenuAreas();
 
             System.out.println("Enter your menu option --> ");
             option = input.nextInt();
 
             switch (option) {
-                case 1: 
-                    computePentagonArea(input);
+                case 1:
+                    System.out.println("enter length-- ");
+                    length = input.nextInt();
+                    System.out.println("enter apothem-- ");
+                    apothem = input.nextInt();
+                    area = computePentagonArea(length, apothem);
+                    System.out.println(" The area of pentagon is --> " + area);
                     break;
                 case 2:
-                    computeTriangleArea(input);
+                    System.out.println("enter base-- ");
+                    base = input.nextInt();
+                    System.out.println("enter height-- ");
+                    height = input.nextInt();
+                    area2 = computeTriangleArea(base, height);
+                    System.out.println(" The area of triangle is--> " + area2);
                     break;
                 case 3:
-                    
-               
-                    computeCircleArea(input);
+
+                    System.out.println("enter radio--");
+                    radio = input.nextInt();
+                    area3 = computeCircleArea(radio);
+                    System.out.println("The area of circle is-->" + area3);
                     break;
-                    case 4:
+                case 4:
                     System.out.println("Good Bye dear");
                     System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid option\n\n\n");
                     break;
-            }          
-              System.out.println(" ========= PHYSICS FORMULAS =======");
-            System.out.println("1. -> Aceleration");
-            System.out.println("2. -> Speed");
-            System.out.println("3. -> Force");
-           
-            System.out.println("5. -> Exit");
+            }
+            System.out.println(" ========= PHYSICS FORMULAS =======");
+            showMenuPhysicsFormulas();
 
             System.out.println("Enter your menu option --> ");
             option = input.nextInt();
 
             switch (option) {
-                case 1: 
-                    computeAceleration(input);
+                case 1:
+                    System.out.println("enter inicial speed-- ");
+                    inicialspeed = input.nextInt();
+                    System.out.println("enter final speed-- ");
+                    finalspeed = input.nextInt();
+                    System.out.println("enter time-- ");
+                    time = input.nextInt();
+                    aceleration = computeAceleration(finalspeed, inicialspeed, time);
+                    System.out.println(" The aceleration --> " + aceleration + "m/sg^2");
                     break;
                 case 2:
-                    computeSpeed(input);
+                    System.out.println("enter distance- ");
+                    distance = input.nextInt();
+                    System.out.println("enter time-- ");
+                    time1 = input.nextInt();
+                    speed1 = computeSpeed(distance, time1);
+                    System.out.println(" The Speed is--> " + speed1 + "m/sg");
                     break;
                 case 3:
-                    computeForce(input);
+                    System.out.println("enter mass--");
+                    mass = input.nextInt();
+                    System.out.println("enter aceleration--");
+                    aceleration1 = input.nextInt();
+                    force = computeForce(mass, aceleration1);
+                    System.out.println("The Force is-->" + force + "N");
                     break;
-               
+                case 4:
+                    System.out.println("Good Bye dear");
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid option\n\n\n");
                     break;
-            }          
-     } while (option != 9);
+            }
+        } while (option != 9);
 
-  }
+    }
 
-    private static void computeForce(Scanner input) {
+    public static void showMenuPhysicsFormulas() {
+        System.out.println("1. -> Aceleration");
+        System.out.println("2. -> Speed");
+        System.out.println("3. -> Force");
+        System.out.println("4. -> Exit");
+    }
+
+    public static void showMenuAreas() {
+        System.out.println("1. -> Pentagon");
+        System.out.println("2. -> Triangle");
+        System.out.println("3. -> Circle");
+        System.out.println("4. -> Exit");
+    }
+
+    private static int computeForce(int mass, int aceleration1) {
         int force;
-        int mass;
-        int aceleration1;
-        System.out.println("enter mass--");
-        mass = input.nextInt();
-        System.out.println("enter aceleration--");
-        aceleration1 = input.nextInt();
-        force = (mass*aceleration1);
-        System.out.println("The Force is-->" + force+ "N");
+        force = (mass * aceleration1);
+        return force;
     }
 
-    private static void computeSpeed(Scanner input) {
+    private static int computeSpeed(int distance, int time1) {
         int speed1;
-        int distance;
-        int time1;
-        System.out.println("enter distance- ");
-        distance = input.nextInt();
-        System.out.println("enter time-- ");
-        time1 = input.nextInt();
-        speed1= distance/time1;
-        System.out.println(" The Speed is--> " + speed1 +"m/sg" );
+        speed1 = distance / time1;
+        return speed1;
     }
 
-    private static void computeAceleration(Scanner input) {
-        int finalspeed;
-        int inicialspeed;
+    private static int computeAceleration(int finalspeed, int inicialspeed, int time) {
         int aceleration;
-        int time;
-        System.out.println("enter inicial speed-- ");
-        inicialspeed = input.nextInt();
-        System.out.println("enter final speed-- ");
-        finalspeed = input.nextInt();
-        System.out.println("enter time-- ");
-        time= input.nextInt();
-        aceleration=(finalspeed-inicialspeed)/time;
-        System.out.println(" The aceleration --> " + aceleration+ "m/sg^2");
+        aceleration = (finalspeed - inicialspeed) / time;
+        return aceleration;
     }
 
-    private static void computeCircleArea(Scanner input) {
-        int radio;
+    private static int computeCircleArea(int radio) {
         int area3;
-        System.out.println("enter radio--");
-        radio= input.nextInt();
-        area3= (int) (3.141592654*(radio*radio));
-        System.out.println("The area of circle is-->" + area3);
+        area3 = (int) (3.141592654 * (radio * radio));
+        return area3;
     }
 
-    private static void computeTriangleArea(Scanner input) {
-        int base;
-        int height;
+    private static int computeTriangleArea(int base, int height) {
         int area2;
-        System.out.println("enter base-- ");
-        base = input.nextInt();
-        System.out.println("enter height-- ");
-        height = input.nextInt();
-        area2= (base*height)/2;
-        System.out.println(" The area of triangle is--> " + area2 );
+        area2 = (base * height) / 2;
+        return area2;
     }
 
-    private static void computePentagonArea(Scanner input) {
-        int length;
-        int apothem;
+    private static int computePentagonArea(int length, int apothem) {
         int area;
-        System.out.println("enter length-- ");
-        length = input.nextInt();
-        System.out.println("enter apothem-- ");
-        apothem = input.nextInt();
-        area=(5*length*apothem)/2;
-        System.out.println(" The area of pentagon is --> " + area);
+        area = (5 * length * apothem) / 2;
+        return area;
     }
-
 }
