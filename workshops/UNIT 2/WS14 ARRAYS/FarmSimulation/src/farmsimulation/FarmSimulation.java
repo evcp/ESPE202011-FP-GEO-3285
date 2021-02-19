@@ -25,9 +25,9 @@ public class FarmSimulation {
         System.out.println("Enter the name of coops--");
         n = input.nextInt();
         eggsByCoop = new int[n];
-        //chickens = new String[20];
+        
         //weightsByCoop = new float[n];
-
+         //chickens = new String [20];
 //        eggsByCoop[0] = 7;
 //        eggsByCoop[1] = 9;
 //        eggsByCoop[2] = 3;
