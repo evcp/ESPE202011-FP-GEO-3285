@@ -21,16 +21,16 @@ public class HW14Arrays {
         for (String farmAnimal : farmAnimals) {
             System.out.println("The animals we have in the farm are--" +farmAnimal);
         }
-        int[] horsesByBarn;
+        int[] animals;
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number of horses");
+        System.out.println("Enter the number of animals");
         int n;
         n = input.nextInt();
         horsesByBarn = new int[n];
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Enter the number of horses of the barn--" + (i + 1) + "--");
-            horsesByBarn[i] = input.nextInt();
+            System.out.println("Enter the number of animals");
+            animals[i] = input.nextInt();
 
         }
         for (int horse : horsesByBarn) {
