@@ -23,11 +23,12 @@ public class WS17TranspotitionMatrix {
         float[][] b;
         float[][] t;
         float[][] c;
-        int n = 0;
         int m = 0;
+        int n = 0;
+
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter the matrix dimensions");
+        System.out.println("Enter the matrix dimesions");
         System.out.print("\n m -->");
         m = input.nextInt();
 
@@ -40,32 +41,31 @@ public class WS17TranspotitionMatrix {
 
         t = new float[n][m];
 
-        System.out.println("---Enter the elements of the matrix---");
+        System.out.println("------Enter the elements of the matrix-------");
 
         a = readMatrixElements(m, n, "A", input);
         b = readMatrixElements(m, n, "B", input);
 
-        for (int tab = 0; tab <= m / 2; tab++) {
-            System.out.print("\t");
+        for (int tab = 0; tab <= n / 2; tab++) {
+            System.out.println("\t");
         }
-        System.out.print(" A ");
+        System.out.println(" A");
 
         prettyPrintMatrix(m, n, a);
         System.out.println("");
 
-        System.out.print(" B ");
+        System.out.println(" B ");
         prettyPrintMatrix(m, n, b);
 
         transpose(n, m, t, a);
 
-        for (int tab = 0; tab <= m / 2; tab++) {
-            System.out.print("\t");
+        for (int tab = 0; tab <= n / 2; tab++) {
+            System.out.println("\t");
         }
-        System.out.print(" T ");
+        System.out.println(" T");
+        prettyPrintMatrix(m, n, t);
 
-        prettyPrintMatrix(n, m, t);
-
-        System.out.println("-- The sum of matrices is --");
+        System.out.println("--The sum of matrices is--");
 
         c = addTwoMatrices(m, n, a, b);
         prettyPrintMatrix(m, n, c);
@@ -75,9 +75,9 @@ public class WS17TranspotitionMatrix {
         float[][] matrix;
         matrix = new float[m][n];
         for (int i = 0; i < m; i++) {
-            System.out.print("--ROW Numbers--" + (i + 1) + "--");
+            System.out.println("--Row Numbers" + (i + 1) + "--");
             for (int j = 0; j < n; j++) {
-                System.out.print(matrixName + " [ " + (i + 1) + " ] [ " + (j + 1) + " ] --> ");
+                System.out.print(matrixName + "[" + (i + 1) + "][" + (j + 1) + "] ->");
                 matrix[i][j] = input.nextFloat();
             }
         }
