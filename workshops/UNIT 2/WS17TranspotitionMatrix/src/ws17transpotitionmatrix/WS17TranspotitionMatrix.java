@@ -25,6 +25,7 @@ public class WS17TranspotitionMatrix {
         float[][] c;
         int m = 0;
         int n = 0;
+        System.out.println("AUTHOR EMILIA VALENTINA CALVACHE");
 
         Scanner input = new Scanner(System.in);
 
