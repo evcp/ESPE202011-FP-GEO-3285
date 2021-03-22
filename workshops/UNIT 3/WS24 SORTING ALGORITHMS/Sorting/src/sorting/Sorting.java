@@ -30,6 +30,7 @@ public class Sorting {
         BubbleSort.sort(integersToSort2);
         System.out.println("");
         printArray(integersToSort2);
+        
 
         integersToSort2 = new int[]{9, 7, 3, 1, 4};
 
