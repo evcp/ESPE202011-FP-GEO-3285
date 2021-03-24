@@ -12,7 +12,7 @@ package sorting;
 public class SelectionSort {
 
     public int[] sort(int[] unsortedArray) {
-         int size = unsortedArray.length;
+        int size = unsortedArray.length;
         int minumum;
         int pos;
 

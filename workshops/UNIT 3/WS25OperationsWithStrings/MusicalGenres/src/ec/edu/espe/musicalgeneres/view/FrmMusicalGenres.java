@@ -138,7 +138,8 @@ public class FrmMusicalGenres extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btmSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSaveActionPerformed
-       String lastname;
+        
+         String lastname;
        String firstname;
        int numbermusicgenres;
        String musicgenres;
@@ -154,6 +155,7 @@ public class FrmMusicalGenres extends javax.swing.JFrame {
        data= lastname + ", " + firstname + ", " + timemusiclisten + ", " + numbermusicgenres + ", " + musicgenres;
        
        JOptionPane.showMessageDialog(null, data);
+     
     }//GEN-LAST:event_btmSaveActionPerformed
 
     /**
