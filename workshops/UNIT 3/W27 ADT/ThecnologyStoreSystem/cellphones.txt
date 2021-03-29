@@ -1,0 +1,7 @@
+
+SAMSUNG , Brown , 8 , true , false
+HUAWEI , Blue , 16 , false , true
+READMI , White , 2 , false , false
+IPHONE , Brown , 2 , false , false
+ , Blue , 2 , true , true
+HUAWEI , Blue , 2 , true , true
