@@ -5,16 +5,16 @@
  */
 package ec.edu.espe.thecnologicycstore.controler;
 
-import ec.edu.espe.thecnologicycstore.model.CellPhone;
+import ec.edu.espe.thecnologicycstore.model.calculator;
 import utils.FileManager;
 
 /**
  *
  * @author Emilia
  */
-public class CellPhonecontroller {
-    public void save(CellPhone cellphone){
-      String data=cellphone.getBrand() + " , " + cellphone.getColor() + " , " + cellphone.getRAM() + " , " + cellphone.isIsNew() + " , " + cellphone.isIsTactil();
+public class Calculator {
+    public void save(calculator cellphone){
+      String data=cellphone.getBrand() + " ; " + cellphone.getColor() + " ;" + cellphone.getRAM() + " ; " + cellphone.isIsNew() + " ; " + cellphone.isIsTactil();
       FileManager.save(data, "cellphones");
     }
     public String read(){
@@ -24,6 +24,5 @@ public class CellPhonecontroller {
     }
 }
     
-
     
 

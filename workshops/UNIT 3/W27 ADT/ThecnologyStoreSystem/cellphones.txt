@@ -3,5 +3,16 @@ SAMSUNG , Brown , 8 , true , false
 HUAWEI , Blue , 16 , false , true
 READMI , White , 2 , false , false
 IPHONE , Brown , 2 , false , false
- , Blue , 2 , true , true
 HUAWEI , Blue , 2 , true , true
+samsung , Blue , 2 , false , true
+huawei , Brown , 8 , false , false
+samsung , White , 16 , false , true
+
+redmi , Grey , 8 , true , true
+IPHONE , White , 4 , false , true
+IPHONE , White , 4 , false , false
+sony , Brown , 2 , true , false
+huawei , Blue , 2 , true , true
+LG , White , 16 , true , false
+lg , White , 16 , true , false
+NOKIA , Brown , 2 , false , true

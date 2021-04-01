@@ -9,22 +9,22 @@ package ec.edu.espe.thecnologicycstore.model;
  *
  * @author Emilia
  */
-public class CellPhone {
+public class calculator {
     private String brand;
     private String color;
-    private int RAM;
+    private int keys;
     private boolean isNew;
-    private boolean isTactil;
+    private boolean isScientific;
 
-    public CellPhone(String brand, String color, int RAM, boolean isNew, boolean isTactil) {
+    public calculator(String brand, String color, int RAM, boolean isNew, boolean isTactil) {
         this.brand = brand;
         this.color = color;
-        this.RAM = RAM;
+        this.keys = RAM;
         this.isNew = isNew;
-        this.isTactil = isTactil;
+        this.isScientific = isTactil;
     }
 
-    public CellPhone() {
+    public calculator() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -57,17 +57,17 @@ public class CellPhone {
     }
 
     /**
-     * @return the RAM
+     * @return the keys
      */
     public int getRAM() {
-        return RAM;
+        return keys;
     }
 
     /**
-     * @param RAM the RAM to set
+     * @param RAM the keys to set
      */
     public void setRAM(int RAM) {
-        this.RAM = RAM;
+        this.keys = RAM;
     }
 
     /**
@@ -85,17 +85,21 @@ public class CellPhone {
     }
 
     /**
-     * @return the isTactil
+     * @return the isScientific
      */
     public boolean isIsTactil() {
-        return isTactil;
+        return isScientific;
     }
 
     /**
-     * @param isTactil the isTactil to set
+     * @param isTactil the isScientific to set
      */
     public void setIsTactil(boolean isTactil) {
-        this.isTactil = isTactil;
+        this.isScientific = isTactil;
+    }
+
+    public void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

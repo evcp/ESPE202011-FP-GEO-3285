@@ -7,19 +7,16 @@ package utils;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 
 /**
  *
  * @author Emilia
  */
-public class FileManager {
-
-   public static boolean createFile(String fileName) {
+public class FileManagers {
+    public static boolean createFile(String fileName) {
         boolean created = false;
         try {
             File file = new File(fileName + ".txt");
@@ -59,11 +56,10 @@ public class FileManager {
 
         return saved;
     }
-
     public static String read(String fileName) {
      fileName = null;
         String products = null;
-        String file = "C:\\Users\\Emilia\\Documents\\espe documentos\\PRIMER NIVEL\\PROGRAMACION\\code\\ESPE202011-FP-GEO-3285\\workshops\\UNIT 3\\W27 ADT\\ThecnologyStoreSystem\\cellphones.txt";
+        String file = "C:\\Users\\Emilia\\Documents\\espe documentos\\PRIMER NIVEL\\PROGRAMACION\\code\\ESPE202011-FP-GEO-3285\\exams\\Unit 3\\ExamFPCalculator\\Calculator.txt";
         try ( BufferedReader textBr = new BufferedReader(new FileReader(file))) {
             while ((fileName = textBr.readLine()) != null) {
                 products = fileName;
@@ -74,5 +70,7 @@ public class FileManager {
         }
         return products;
     }
-
 }
+
+    
+

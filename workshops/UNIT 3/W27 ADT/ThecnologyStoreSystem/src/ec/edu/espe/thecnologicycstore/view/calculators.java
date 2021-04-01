@@ -5,8 +5,8 @@
  */
 package ec.edu.espe.thecnologicycstore.view;
 
-import ec.edu.espe.thecnologicycstore.controler.CellPhonecontroller;
-import ec.edu.espe.thecnologicycstore.model.CellPhone;
+import ec.edu.espe.thecnologicycstore.controler.Calculator;
+import ec.edu.espe.thecnologicycstore.model.calculator;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -14,12 +14,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Emilia
  */
-public class FrmCellPhone extends javax.swing.JFrame {
+public class calculators extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmCellPhone
      */
-    public FrmCellPhone() {
+    public calculators() {
         initComponents();
     }
 
@@ -56,9 +56,9 @@ public class FrmCellPhone extends javax.swing.JFrame {
 
         jLabel3.setText("Color:");
 
-        jLabel4.setText("RAM");
+        jLabel4.setText("keys");
 
-        jLabel5.setText("isTactil");
+        jLabel5.setText("iscientific");
 
         jLabel6.setText("isNew:");
 
@@ -120,7 +120,7 @@ public class FrmCellPhone extends javax.swing.JFrame {
                                 .addComponent(cmbisNew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtbrand, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(cmbRAM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,23 +161,23 @@ public class FrmCellPhone extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
-        CellPhone cellphone;
+         calculator calculator;
         String brand;
         String color;
-        int RAM;
+        int keys;
         boolean isNew;
-        boolean isTactil;
-        CellPhonecontroller cellphonecontroller = new CellPhonecontroller();
+        boolean isCientific;
+        Calculator cellphonecontroller = new Calculator();
         
         brand=txtbrand.getText();
         color=cmbcolor.getSelectedItem().toString();
-        RAM=Integer.parseInt(cmbRAM.getSelectedItem().toString());
+        keys=Integer.parseInt(cmbRAM.getSelectedItem().toString());
         isNew=Boolean.parseBoolean(cmbisNew.getSelectedItem().toString());
-        isTactil=Boolean.parseBoolean(cmbisTactil.getSelectedItem().toString());
+        isCientific=Boolean.parseBoolean(cmbisTactil.getSelectedItem().toString());
         
-        cellphone= new CellPhone(brand, color, RAM, isNew, isTactil);
-        cellphonecontroller.save(cellphone);
-        JOptionPane.showMessageDialog(rootPane, cellphone.getBrand());
+        calculator= new calculator(brand, color, keys, isNew, isCientific);
+        cellphonecontroller.save(calculator);
+        JOptionPane.showMessageDialog(rootPane, calculator.getBrand());
         
         
         
@@ -185,7 +185,7 @@ public class FrmCellPhone extends javax.swing.JFrame {
 
     private void btnshowdataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnshowdataActionPerformed
         
-         CellPhonecontroller cellphonecontroller = new CellPhonecontroller();
+          Calculator cellphonecontroller = new Calculator();
          txtshowcellphones.setText(cellphonecontroller.read());
     }//GEN-LAST:event_btnshowdataActionPerformed
 
@@ -206,20 +206,21 @@ public class FrmCellPhone extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmCellPhone.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmCellPhone.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmCellPhone.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmCellPhone.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmCellPhone().setVisible(true);
+             new calculator().setVisible(true);  
             }
         });
     }

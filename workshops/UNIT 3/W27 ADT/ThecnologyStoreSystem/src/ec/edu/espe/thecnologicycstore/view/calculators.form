@@ -59,7 +59,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="83" max="32767" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -125,12 +125,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="RAM"/>
+        <Property name="text" type="java.lang.String" value="keys"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="isTactil"/>
+        <Property name="text" type="java.lang.String" value="iscientific"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
